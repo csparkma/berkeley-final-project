@@ -1,4 +1,4 @@
-# berkeley-final-project
+# Berkeley Final Project
 Berkeley Data Analytics Bootcamp Final project - Sept-Oct 2020
 
 ## Group:
