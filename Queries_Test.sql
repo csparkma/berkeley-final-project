@@ -1,0 +1,43 @@
+SELECT
+fullvisitorId
+,visitId
+,visitNumber
+,device.browser
+,hitNumber
+,time
+,minute
+,hour
+,isSecure
+,isEntrance
+,isExit
+,isInteraction
+,hits.eCommerceAction.action_type
+,hits.eCommerceAction.step
+,hits.type
+,hits.social.hasSocialSourceReferral
+,hits.contentGroup.contentGroup1
+,hits.contentGroup.contentGroup2
+,hits.dataSource
+,hits.page.pagePath
+,product.productSKU 
+,product.v2ProductName
+,product.v2ProductCategory
+,product.productVariant
+,product.productBrand
+,product.productRevenue
+,product.localProductRevenue
+,product.productPrice
+,product.localProductPrice
+,product.productQuantity
+,product.productRefundAmount
+,product.localProductRefundAmount
+,product.isImpression
+,product.isClick
+,product.productListName
+,product.productListPosition
+,product.productCouponCode
+    FROM
+  `bigquery-public-data.google_analytics_sample.ga_sessions_20170801`
+      , UNNEST(hits) as hits
+      , unnest(hits.product) as product
+ ;
