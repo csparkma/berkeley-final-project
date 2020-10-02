@@ -27,5 +27,5 @@ Our project will focus on:
   - (i.e. What countries are customers with repeat purchases from? How many pages does the ideal customer visit prior to purchase? How many visits to the website before a purchase?)
 - **Building a machine learning model to assign a "Propensity to Purchase" score for each unique visitor of the website**
 
-## Group Communication
+## Group Communication:
 Our group is communicating through Slack, Zoom, and Texting. We have scheduled zoom calls to check-in almost every few days.  
