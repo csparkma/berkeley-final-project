@@ -35,7 +35,9 @@ Our project will focus on:
 ## Technologies we intend to use:
 -**BigQuery**
  - BigQuery is being usd to extract our data
+ 
 -**Amazon RDS**
  - We will be using Amazon RDS to store our data
+ 
 -**Tableau**
  - Tableau will be used to create our Dashboard
