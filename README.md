@@ -32,12 +32,14 @@ Our project will focus on:
   - (i.e. What countries are customers with repeat purchases from? How many pages does the ideal customer visit prior to purchase? How many visits to the website before a purchase?)
 - **Building a machine learning model to assign a "Propensity to Purchase" score for each unique visitor of the website**
 
-## Technologies we intend to use:
--**BigQuery**
- - BigQuery is being usd to extract our data
+# Technologies Used:
+## Data Cleaning and Analysis
+BigQuery will be used to clean the data and perform an eploratory analysis.
  
--**Amazon RDS**
- - We will be using Amazon RDS to store our data
+## Database Storage
+ Amazon RDS will be used to store our data, and we will integrate it with Tableau to display the dashboard.
  
--**Tableau**
- - Tableau will be used to create our Dashboard
+## Machine Learning
+
+## Dashboard
+Tableau will be used to create our Dashboard. It will be hosted through a webpage. 
