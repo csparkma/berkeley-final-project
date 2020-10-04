@@ -31,3 +31,11 @@ Our project will focus on:
 - **The Behavioral & Demographic makeup of "ideal" customers**
   - (i.e. What countries are customers with repeat purchases from? How many pages does the ideal customer visit prior to purchase? How many visits to the website before a purchase?)
 - **Building a machine learning model to assign a "Propensity to Purchase" score for each unique visitor of the website**
+
+## Technologies we intend to use:
+-**BigQuery**
+ - BigQuery is being usd to extract our data
+-**Amazon RDS**
+ - We will be using Amazon RDS to store our data
+-**Tableau**
+ - Tableau will be used to create our Dashboard
