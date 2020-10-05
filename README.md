@@ -34,7 +34,7 @@ Our project will focus on:
 
 # Technologies Used:
 ## Data Cleaning and Analysis
-BigQuery will be used to clean the data and perform an eploratory analysis.
+BigQuery will be used to clean the data and perform an exploratory analysis.
  
 ## Database Storage
  Amazon RDS will be used to store our data, and we will integrate it with Tableau to display the dashboard.
