@@ -31,7 +31,7 @@ Our project will focus on:
 - **The Behavioral & Demographic makeup of "ideal" customers**
   - (i.e. What countries are customers with repeat purchases from? How many pages does the ideal customer visit prior to purchase? How many visits to the website before a purchase?)
 - **Building a machine learning model to assign a "Propensity to Purchase" score for each unique visitor of the website**
- - Machine learning model will depend on overall testing, but will be a classification model as we are aiming to undersand specific individuals propensity (or liklihood) to purchase
+  - Machine learning model will depend on overall testing, but will be a classification model as we are aiming to undersand specific individuals propensity (or liklihood) to purchase
 
 # Technologies Used:
 ## Data Cleaning and Analysis
