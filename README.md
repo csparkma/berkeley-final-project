@@ -1,6 +1,9 @@
 # Berkeley Final Project
 Berkeley Data Analytics Bootcamp Final project - Sept-Oct 2020
 
+# Presentation:
+- Our overall project plan & outcome(s) can be found [here](https://docs.google.com/presentation/d/1IJwm4imWicTFp8LapvV8N88eyIyjYjRl-6_hksx4jWI/edit?usp=sharing).
+
 ## Group:
 - **Nathan Toy**: Machine Learning Lead & Project Manager Assist
 - **Karen Pineda**: Dashboard
