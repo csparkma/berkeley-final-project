@@ -47,3 +47,8 @@ BigQuery will be used to clean the data and perform an exploratory analysis.
 
 ## Dashboard
 Tableau will be used to create our Dashboard. It will be hosted through a webpage. 
+
+
+## WEEK 2 
+Dashboard Google Slide Link https://docs.google.com/presentation/d/1U8UInYX9gbfdw8o_efzpRncUv3fY-gJfF8pdPaCVu8A/edit?usp=sharing
+Blueprint attached  
