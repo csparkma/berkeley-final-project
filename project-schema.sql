@@ -2,8 +2,8 @@
 CREATE TABLE customers (
      fullvisitorId VARCHAR(19) NOT NULL,
      visitId INT NOT NULL,
-	 PRIMARY KEY (fullvisitorId),
-	 UNIQUE (visitId)
+	 --PRIMARY KEY (fullvisitorId),
+	 --UNIQUE (visitId)
 );
 
 CREATE TABLE bigquery_totals (
@@ -31,10 +31,12 @@ CREATE TABLE bigquery_totals (
 	newVisits integer,
 	pageviews integer,
 	sessionQualityDim integer,
+	timeOnScreen integer,
+	timeOnSite integer,
 	totalTransactionRevenue bigint,
 	transactionRevenue bigint,
 	transactions integer,
-	visits integer,
-	FOREIGN KEY (fullvisitorId) REFERENCES customers (fullvisitorId),
-	PRIMARY KEY (fullvisitorId)
+	--visits integer,
+	--FOREIGN KEY (fullvisitorId) REFERENCES customers (fullvisitorId),
+	--PRIMARY KEY (fullvisitorId)
 );
