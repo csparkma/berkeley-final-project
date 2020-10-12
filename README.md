@@ -40,7 +40,7 @@ Data obtained from Google Analytics BigQuery is taken in sections via queries to
   - Sessions
   - Hits (currently WIP)
 
-Master data table bigquery_totals is joined to sessions table via a left join as a WIP dataset. 
+Project-queries2.sql details queries run in SQL with comments for table creation and joins. 
 
 ## Machine Learning Description:
 The Google Analytics BigQuery data must be prepared for Machine Learning methods to be applied. The data preprocessing steps include:
