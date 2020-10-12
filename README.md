@@ -34,6 +34,14 @@ Our project will focus on:
   - (i.e. What countries are customers with repeat purchases from? How many pages does the ideal customer visit prior to purchase? How many visits to the website before a purchase?)
 - **Building a machine learning model to assign a "Propensity to Purchase" score for each unique visitor of the website**
 
+## ETL Database Setup:
+Data obtained from Google Analytics BigQuery is taken in sections via queries to BigQuery to prepare the following tables in PostgresSQL PgAdmin (connected to RDS db hosted via AWS), that will be included in final ERD, queries, and schema:
+  - Customers
+  - Sessions
+  - Hits (currently WIP)
+
+Master data table bigquery_totals is joined to sessions table via a left join as a WIP dataset. 
+
 ## Machine Learning Description:
 The Google Analytics BigQuery data must be prepared for Machine Learning methods to be applied. The data preprocessing steps include:
  - Connecting to RDS database containing data and populating NaN values as 0
