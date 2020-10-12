@@ -34,3 +34,47 @@ Our project will focus on:
   - (i.e. What countries are customers with repeat purchases from? How many pages does the ideal customer visit prior to purchase? How many visits to the website before a purchase?)
 - **Building a machine learning model to assign a "Propensity to Purchase" score for each unique visitor of the website**
 
+## Machine Learning Description:
+The Google Analytics BigQuery data must be prepared for Machine Learning methods to be applied. The data preprocessing steps include:
+ - Connecting to RDS database containing data and populating NaN values as 0
+ - "Bucketizing" qualitative components to reduce dimensionality for One Hot Encoding
+   - E.G. type of browser for session, subcontinent, country etc. were reduced to ~10 dimensions with less occuring values populated as "Other"
+ - Removing preliminary columns from the original dataset that would not be worthwhile for modeling
+   - E.G. Geographic columns contained incomplete or missing values for > 30% of dataset 
+   - Columns that would not be good predictors were removed. Those columns removed include:
+     - Geographic information for the session, Full Visitor ID, Date of visit, referral path, etc.  
+ - One Hot Encoding is applied to a clean dataset, and split on standard 75% training set and 25% test set via sklearn train_test_split function default
+Once the dataset preprocessing is complete a variety of classification Machine Learning models are applied to predict if a session is going to result in a transaction. For the models attempted they are:
+ - Logistic Regression Classifier
+   - This is used as a base level "simple" linearly separable type of model
+   - This model ultimately predicts that every session is not going to result in a transaction, and boasts a 98.6% accuracy with predicting 'No' for every session
+     - The F1 Score for the Logistc Regression is 0% because there were no valid predictions (False Positives, False Negatives, True Negatives) 
+ - Random Forest Classifier
+   - A higher complexity Random Forest Classifier is used because of its "simpleness", and ability to work well with imbalanced data sets
+   - This model returns the same accuracy as the Logistic Regression model (98.6%), but does it without guessing 'No' for every session
+     - The F1 Score for the Random Forest is 28%
+ - Deep Learning Neural Network
+   - A "simple" deep learning model is applied with 1 hidden layer underneath it
+   - This model returns still the same accuracy as the previous models
+     - The team is optimistic that the Deep Learning Neural Network can be improved with additional hidden layers, and undersampling/oversampling because of the imbalanced dataset
+There is some additional work that needs to be done to boost the performance of the Machine Learning models. The group intends to use undersampling/oversampling to train the model because of the imbalance of session/transactions. It will also be worthwhile to explore improvements to the Random Forest model since it is predicing successful and unsuccessful transactions. At the same time the group is optimistic to unpack more of the Neural Network to understand predicted values, and accuracy/F1 score for the model's predictions.  
+  
+  - Machine learning model will depend on overall testing, but will be a classification model as we are aiming to undersand specific individuals propensity (or liklihood) to purchase
+
+# Technologies Used:
+## Data Cleaning and Analysis
+BigQuery will be used to clean the data and perform an exploratory analysis.
+ 
+## Database Storage
+ Amazon RDS will be used to store our data, and we will integrate it with Tableau to display the dashboard.
+ 
+## Machine Learning
+
+## Dashboard
+Tableau will be used to create our Dashboard. It will be hosted through a webpage. 
+
+
+## WEEK 2 
+Dashboard Google Slide Link https://docs.google.com/presentation/d/1U8UInYX9gbfdw8o_efzpRncUv3fY-gJfF8pdPaCVu8A/edit?usp=sharing
+
+- Blueprint 1 & 2 attached above  
