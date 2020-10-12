@@ -1,17 +1,17 @@
--- Creating tables for Customers and BigQuery Totals
+-- Creating tables for Customers and BigQuery Totals--
 CREATE TABLE customers (
      fullvisitorId VARCHAR(19) NOT NULL,
      visitId INT NOT NULL,
-	 --PRIMARY KEY (fullvisitorId),
-	 --UNIQUE (visitId)
+     date DATE NOT NULL,
+     PRIMARY KEY (fullvisitorId),
 );
 
 CREATE TABLE bigquery_totals (
-  	fullvisitorId VARCHAR(19),
-	visitId integer,
-	visitNumber integer,
-	visitStartTime integer,
-	date date,
+  	fullvisitorId VARCHAR(19) NOT NULL,
+	visitId INT NOT NULL,
+	visitNumber INT NOT NULL,
+	visitStartTime INT NOT NULL,
+	date DATE NOT NULL,
 	socialEngagementType VARCHAR(50),
 	channelGrouping VARCHAR(15),
 	browser VARCHAR(50),
@@ -25,18 +25,17 @@ CREATE TABLE bigquery_totals (
 	referralPath VARCHAR(255),
 	source VARCHAR(100),
 	medium VARCHAR(10),
-	isTrueDirect boolean,
-	bounces integer,
-	hits integer,
-	newVisits integer,
-	pageviews integer,
-	sessionQualityDim integer,
-	timeOnScreen integer,
-	timeOnSite integer,
-	totalTransactionRevenue bigint,
-	transactionRevenue bigint,
-	transactions integer,
-	--visits integer,
-	--FOREIGN KEY (fullvisitorId) REFERENCES customers (fullvisitorId),
-	--PRIMARY KEY (fullvisitorId)
+	isTrueDirect BOOLEAN,
+	bounces INT,
+	hits INT,
+	newVisits INT,
+	pageviews INT,
+	sessionQualityDim INT,
+	timeOnScreen INT,
+	timeOnSite INT,
+	totalTransactionRevenue BIGINT,
+	transactionRevenue BIGINT,
+	transactions INT,
+	FOREIGN KEY (fullvisitorId) REFERENCES customers (fullvisitorId),
+	PRIMARY KEY (fullvisitorId)
 );
