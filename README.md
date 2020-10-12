@@ -49,6 +49,8 @@ Tableau will be used to create our Dashboard. It will be hosted through a webpag
 
 
 ## WEEK 2 
+(https://github.com/csparkma/berkeley-final-project/blob/master/Screen%20Shot%202020-10-11%20at%209.00.08%20PM.png)
+
 Dashboard Google Slide Link https://docs.google.com/presentation/d/1U8UInYX9gbfdw8o_efzpRncUv3fY-gJfF8pdPaCVu8A/edit?usp=sharing
 
 - Blueprint 1 & 2 attached above  
