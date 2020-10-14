@@ -86,3 +86,7 @@ Tableau will be used to create our Dashboard. It will be hosted through a webpag
 Dashboard Google Slide Link https://docs.google.com/presentation/d/1U8UInYX9gbfdw8o_efzpRncUv3fY-gJfF8pdPaCVu8A/edit?usp=sharing
 
 - Blueprint 1 & 2 attached above  
+
+## WEEK 3
+Tableau Dashboard Link 
+https://public.tableau.com/shared/92WF9ZBZ6?:display_count=y&:origin=viz_share_link
