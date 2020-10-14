@@ -1,12 +1,19 @@
 # Berkeley Final Project
 Berkeley Data Analytics Bootcamp Final project - Sept-Oct 2020
 
+# Presentation:
+- Our overall project plan & outcome(s) can be found [here](https://docs.google.com/presentation/d/1IJwm4imWicTFp8LapvV8N88eyIyjYjRl-6_hksx4jWI/edit?usp=sharing).
+
 ## Group:
 - **Nathan Toy**: Machine Learning Lead & Project Manager Assist
 - **Karen Pineda**: Dashboard
 - **Jessica Scott**: ETL
-- **Luis Gomez**: ETL/Floater
 - **Connor Sparkman**: Project Manager Lead & Machine Learning Assist
+
+## Communication Protocols:
+- 60% *Slack*: Main source of communication used for collaboration and questions
+- 35% *Video Chat*: Secondary source for us to brainstorm and make project decisions
+- 5% *Phone*: Last resort communication to schedule meetings or get ahold of group member that is away from the computer.
 
 ## Project Goal:
  #### Understand the Audience and Behavior of visitors to the Google Merchandise Store (eCommerce platform) in order to better optimize the buyers journey and increase purchase rate of visitors.
@@ -26,3 +33,4 @@ Our project will focus on:
 - **The Behavioral & Demographic makeup of "ideal" customers**
   - (i.e. What countries are customers with repeat purchases from? How many pages does the ideal customer visit prior to purchase? How many visits to the website before a purchase?)
 - **Building a machine learning model to assign a "Propensity to Purchase" score for each unique visitor of the website**
+
