@@ -46,28 +46,42 @@ Project-queries2.sql details queries run in SQL with comments for table creation
 The Google Analytics BigQuery data must be prepared for Machine Learning methods to be applied. The data preprocessing steps include:
  - Connecting to RDS database containing data and populating NaN values as 0
  - "Bucketizing" qualitative components to reduce dimensionality for One Hot Encoding
-   - E.G. type of browser for session, subcontinent, country etc. were reduced to ~10 dimensions with less occuring values populated as "Other"
- - Removing preliminary columns from the original dataset that would not be worthwhile for modeling
-   - E.G. Geographic columns contained incomplete or missing values for > 30% of dataset 
-   - Columns that would not be good predictors were removed. Those columns removed include:
-     - Geographic information for the session, Full Visitor ID, Date of visit, referral path, etc.  
+   - Browser is reduced from 26 to 11 dimensions
+   - Subcontinent is reduced from 23 to 13 dimensions
+   - Country is reduced from 179 to 31 dimensions
+   - Source is reduced from 96 to 21 dimensions
+ - Removing features from the original dataset that would not be worthwhile for modeling
+   - Geographic features contained incomplete or missing values for > 30% of dataset 
+     -  Region, Metro, and City are removed because of incomplete data
+   - Features that would not be good predictors were removed. Those columns removed include:
+     - Geographic information for the session, Full Visitor ID, Date of visit, referral path, date  
  - One Hot Encoding is applied to a clean dataset, and split on standard 75% training set and 25% test set via sklearn train_test_split function default
-Once the dataset preprocessing is complete a variety of classification Machine Learning models are applied to predict if a session is going to result in a transaction. For the models attempted they are:
+   - One Hot Encoding applied to features:
+     - Social Engagement Type, Channel Grouping, Browser, Operating System, Device Category, Continent, Subcontinent, Country, Source, Medium
+Once the dataset preprocessing is complete a variety of classification Machine Learning models are applied to predict if a session is going to result in a transaction. The dataset has an imbalance for sessions/transactions (I.E. There are many records showing visitors browsing the Google Store, but not purchasing products),and the dataset is upsampled to boost the number of tranasctions for Machine Learning. For the models attempted they are:
  - Logistic Regression Classifier
    - This is used as a base level "simple" linearly separable type of model
-   - This model ultimately predicts that every session is not going to result in a transaction, and boasts a 98.6% accuracy with predicting 'No' for every session
-     - The F1 Score for the Logistc Regression is 0% because there were no valid predictions (False Positives, False Negatives, True Negatives) 
+   - Scores:
+     - Accuracy: 0.952
+     - F1 Score: 0.374
+     - Recall Score:  0.932
+   - Logistic Regression yields a very high Recall (True Positive/(True Positive + False Negative) because it does not predict False Negatives very often which leads to a very high score.
  - Random Forest Classifier
    - A higher complexity Random Forest Classifier is used because of its "simpleness", and ability to work well with imbalanced data sets
-   - This model returns the same accuracy as the Logistic Regression model (98.6%), but does it without guessing 'No' for every session
-     - The F1 Score for the Random Forest is 28%
+   - Scores:
+     - Accuracy: 0.983
+     - F1 Score: 0.428
+     - Recall SCore: 0.411
+   - Random Forest has a lower Recall Score, but a higher F1 Score dictates this is a "healthier" model compared to Logistic Regression
  - Deep Learning Neural Network
    - A "simple" deep learning model is applied with 1 hidden layer underneath it
-   - This model returns still the same accuracy as the previous models
-     - The team is optimistic that the Deep Learning Neural Network can be improved with additional hidden layers, and undersampling/oversampling because of the imbalanced dataset
-There is some additional work that needs to be done to boost the performance of the Machine Learning models. The group intends to use undersampling/oversampling to train the model because of the imbalance of session/transactions. It will also be worthwhile to explore improvements to the Random Forest model since it is predicing successful and unsuccessful transactions. At the same time the group is optimistic to unpack more of the Neural Network to understand predicted values, and accuracy/F1 score for the model's predictions.  
+   - Scores: 
+     - Accuracy: 0.983
+     - F1 Score: 0.422
+     - Recall SCore: 0.406
+   - Neural Network shows by the scores as second to Random Forest, with very close performance. it may be worthwhile to explore additional hidden layers for this model.
+The group is optimistic to unpack more of the Neural Network to see if there is additional performance. The scores above represent the model with upsampled transactions. Model performance may improve with undersampling/SMOTE.
   
-  - Machine learning model will depend on overall testing, but will be a classification model as we are aiming to undersand specific individuals propensity (or liklihood) to purchase
 
 # Technologies Used:
 ## Data Cleaning and Analysis
