@@ -71,7 +71,7 @@ Once the dataset preprocessing is complete a variety of classification Machine L
    - Scores:
      - Accuracy: 0.983
      - F1 Score: 0.428
-     - Recall SCore: 0.411
+     - Recall Score: 0.411
    - Random Forest has a lower Recall Score, but a higher F1 Score dictates this is a "healthier" model compared to Logistic Regression
  - Deep Learning Neural Network
    - A "simple" deep learning model is applied with 1 hidden layer underneath it
@@ -80,8 +80,9 @@ Once the dataset preprocessing is complete a variety of classification Machine L
      - F1 Score: 0.422
      - Recall SCore: 0.406
    - Neural Network shows by the scores as second to Random Forest, with very close performance. it may be worthwhile to explore additional hidden layers for this model.
-The group is optimistic to unpack more of the Neural Network to see if there is additional performance. The scores above represent the model with upsampled transactions. Model performance may improve with undersampling/SMOTE.
-  
+Overall the models vary in their effectiveness. Random Forest is the leading model based off of F1 Score, Accuracy, and Recall. The accuracy scores across the models is >0.95 which is very high for models, but more often than not the accuracy is high because the model predicts no transactions a high percentage of the time. The group is optimistic to unpack more of the Neural Network to see if there is additional performance. The scores above represent the model with upsampled transactions. Model performance may improve with undersampling/SMOTE.
+ 
+With the models classifying if a visitor will be making a transaction we can start focusing on presenting the predictions as a "propensity to purchase".
 
 # Technologies Used:
 ## Data Cleaning and Analysis
