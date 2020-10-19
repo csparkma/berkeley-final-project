@@ -85,8 +85,6 @@ BigQuery will be used to clean the data and perform an exploratory analysis.
  
 ## Database Storage
  Amazon RDS will be used to store our data, and we will integrate it with Tableau to display the dashboard.
- 
-## Machine Learning
 
 ## Dashboard
 Tableau will be used to create our Dashboard. It will be hosted through a webpage. 
