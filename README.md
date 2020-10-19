@@ -10,11 +10,6 @@ Berkeley Data Analytics Bootcamp Final project - Sept-Oct 2020
 - **Jessica Scott**: ETL
 - **Connor Sparkman**: Project Manager Lead & Machine Learning Assist
 
-## Communication Protocols:
-- 60% *Slack*: Main source of communication used for collaboration and questions
-- 35% *Video Chat*: Secondary source for us to brainstorm and make project decisions
-- 5% *Phone*: Last resort communication to schedule meetings or get ahold of group member that is away from the computer.
-
 ## Project Goal:
  #### Understand the Audience and Behavior of visitors to the Google Merchandise Store (eCommerce platform) in order to better optimize the buyers journey and increase purchase rate of visitors.
 
