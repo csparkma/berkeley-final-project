@@ -92,7 +92,7 @@ Tableau will be used to create our Dashboard. It will be hosted through a webpag
 
 
 ## WEEK 2 
-Dashboard Google Slide Link https://docs.google.com/presentation/d/1U8UInYX9gbfdw8o_efzpRncUv3fY-gJfF8pdPaCVu8A/edit?usp=sharing
+[Dashboard Google Slide](https://docs.google.com/presentation/d/1U8UInYX9gbfdw8o_efzpRncUv3fY-gJfF8pdPaCVu8A/edit?usp=sharing)
 
 - Blueprint 1 & 2 attached above  
 
