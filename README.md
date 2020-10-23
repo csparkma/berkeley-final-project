@@ -41,7 +41,7 @@ The ETL process of this project involved the platforms of PostgresSQL PgAdmin an
        -WebsiteTrafficSource
        -BigQuery_Totals_Join.
    
-A back-up copy of the original database is available for use, in addition to the original database that is connected via GoogleCloud for updating with larger data. 
+A back-up copy of the original database is available for use (holds a small sample set of data, of ~1700 rows as a placeholder), in addition to the original database that is connected via GoogleCloud for updating with larger data (contains ~600,000 rows of data). 
 
 ## Machine Learning Description:
 The Google Analytics BigQuery data must be prepared for Machine Learning methods to be applied. The data preprocessing steps include:
