@@ -54,29 +54,23 @@ The Google Analytics BigQuery data must be prepared for Machine Learning methods
  - One Hot Encoding is applied to a clean dataset, and split on standard 75% training set and 25% test set via sklearn train_test_split function default
    - One Hot Encoding applied to features:
      - Social Engagement Type, Channel Grouping, Browser, Operating System, Device Category, Continent, Subcontinent, Country, Source, Medium
-Once the dataset preprocessing is complete a variety of classification Machine Learning models are applied to predict if a session is going to result in a transaction. The dataset has an imbalance for sessions/transactions (I.E. There are many records showing visitors browsing the Google Store, but not purchasing products),and the dataset is upsampled to boost the number of tranasctions for Machine Learning. For the models attempted they are:
+Once the dataset preprocessing is complete a variety of classification Machine Learning models are applied to predict if a session is going to result in a transaction. The Machine Learning models are trained on over 500,000 rows of data for customer sessions on the Google Store.
  - Logistic Regression Classifier
    - This is used as a base level "simple" linearly separable type of model
    - Scores:
-     - Accuracy: 0.952
-     - F1 Score: 0.374
-     - Recall Score:  0.932
-   - Logistic Regression yields a very high Recall (True Positive/(True Positive + False Negative) because it does not predict False Negatives very often which leads to a very high score.
+     ![Logistic Regression](https://github.com/csparkma/berkeley-final-project/blob/n-toy-working-branch/Resources/Logistic_Regression_Confusion_Matrix.PNG)
+   - Logistic Regression by the scores has an F1 Score of 0.289 which is not that impressive. This model does not seem to be working well for predicting if a customer will have a transaction. This model is used to set a baseline score, and also check to linear-seperability for transactions. The scores of the model show this is not a linearly-separable problem.  
  - Random Forest Classifier
    - A higher complexity Random Forest Classifier is used because of its "simpleness", and ability to work well with imbalanced data sets
    - Scores:
-     - Accuracy: 0.983
-     - F1 Score: 0.428
-     - Recall Score: 0.411
-   - Random Forest has a lower Recall Score, but a higher F1 Score dictates this is a "healthier" model compared to Logistic Regression
+     ![Random Forest](https://github.com/csparkma/berkeley-final-project/blob/n-toy-working-branch/Resources/Random_Forest_Confusion_Matrix.PNG)
+   - Random Forest shows tremendous results by the scores. Random Forest is doing well predicting if a customer will have a transaction, and most likely owes success to the tree decision based structure for given features. There are issues with interpreting a decision tree from the Random Forest however. 
  - Deep Learning Neural Network
-   - A "simple" deep learning model is applied with 1 hidden layer underneath it
+   - A deep learning model is applied with 1 hidden layer underneath it
    - Scores: 
-     - Accuracy: 0.983
-     - F1 Score: 0.422
-     - Recall SCore: 0.406
-   - Neural Network shows by the scores as second to Random Forest, with very close performance. it may be worthwhile to explore additional hidden layers for this model.
-Overall the models vary in their effectiveness. Random Forest is the leading model based off of F1 Score, Accuracy, and Recall. The accuracy scores across the models is >0.95 which is very high for models, but more often than not the accuracy is high because the model predicts no transactions a high percentage of the time. The group is optimistic to unpack more of the Neural Network to see if there is additional performance. The scores above represent the model with upsampled transactions. Model performance may improve with undersampling/SMOTE.
+     ![Neural Network](https://github.com/csparkma/berkeley-final-project/blob/n-toy-working-branch/Resources/Neural_Network_Confusion_Matrix.png)
+   - Neural Network is slightly better than Logistic Regression, but fails to Random Forest by the numbers. There may be better performance hidden in this model, but at the expensive cost of computation time. 
+There is one clear model outperforming the rest. Random Forest is the leading model based off of all scores. This is expected because tree based models generally fair better than other models to capture irregularities within the dataset because of the tree decision split structure. However, interpreting the model is chaotic because of the complexity of each estimator within the forest. Using OneHotEncoding on categorical features is most likely the cause for the complexity in reading Decision trees.  
  
 With the models classifying if a visitor will be making a transaction we can start focusing on presenting the predictions as a "propensity to purchase".
 
