@@ -1,0 +1,41 @@
+-- Creating tables for Customers and BigQuery Totals--
+CREATE TABLE customers (
+     fullvisitorId VARCHAR(19) NOT NULL,
+     visitId INT NOT NULL,
+     date DATE NOT NULL,
+     PRIMARY KEY (fullvisitorId),
+);
+
+CREATE TABLE bigquery_totals (
+  	fullvisitorId VARCHAR(19) NOT NULL,
+	visitId INT NOT NULL,
+	visitNumber INT NOT NULL,
+	visitStartTime INT NOT NULL,
+	date DATE NOT NULL,
+	socialEngagementType VARCHAR(50),
+	channelGrouping VARCHAR(15),
+	browser VARCHAR(50),
+	operatingSystem VARCHAR(15),
+	deviceCategory VARCHAR(7),
+	subContinent VARCHAR(25),
+	country VARCHAR(50),
+	region VARCHAR(50),
+	metro VARCHAR(50),
+	city VARCHAR(50),
+	referralPath VARCHAR(255),
+	source VARCHAR(100),
+	medium VARCHAR(10),
+	isTrueDirect BOOLEAN,
+	bounces INT,
+	hits INT,
+	newVisits INT,
+	pageviews INT,
+	sessionQualityDim INT,
+	timeOnScreen INT,
+	timeOnSite INT,
+	totalTransactionRevenue BIGINT,
+	transactionRevenue BIGINT,
+	transactions INT,
+	FOREIGN KEY (fullvisitorId) REFERENCES customers (fullvisitorId),
+	PRIMARY KEY (fullvisitorId)
+);

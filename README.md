@@ -8,6 +8,7 @@ Berkeley Data Analytics Bootcamp Final project - Sept-Oct 2020
 ## Group:
 - **Nathan Toy**: Machine Learning Lead & Project Manager Assist
 - **Karen Pineda**: Dashboard
+=======
 - **Jessica Scott**: ETL/Database Maintenance
 - **Connor Sparkman**: Project Manager Lead & Machine Learning Assist
 
