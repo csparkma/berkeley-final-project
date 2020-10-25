@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "bootcamp-bigquery-290701",
+  "private_key_id": "1adda4aebc1bad273210c968e2d994af47f246fe",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC0Zuj9bmwvcfir\nDkPGd941iHtRPKrWF4bKsPW0xvcJkwfQJTJBvsdyJI3PU3QejNIsMt+SKTeL/pVF\nusAf1g8AIc6yEp5+jARNUcMpQzThCfjQdZi+B5+Zp7c2pGS5oxDLuDu+DmGGUzVz\nSNNf9EfGGXfe4qxEUkddJzbCbTkJhrMCVx4gFBS1OAVmqH8i7QEjSNeVEIM3v2/U\nock7BSEnKdX3krQ7k9VcdoJnQihZEWTgWG+MNbsNLw87QIxfYyeCPRamkvypEGzW\n66hZCcn+ZWGYI5GvuQd1AZnvJg1/H9oztYVAXxW5UYJQxD67GUa3n5lK+Hf0Bwp+\n5/A+KGx5AgMBAAECggEACxyPTa+xizAB22I65uNboq4NvUm3ZOkmfMO3/Xd1RNx8\nduz0u9uEcc0EcaGhD9s6Mxbf8f5iWY6+rACeNGWBsbzjV4fRoTLHmw4l+GTgitsL\nmO9rDx1bPFAem5nIb1JttFaTLby5c8XRRloL5vDCjGh35JjPLxb5b5YzrAnuWBT5\n8z4dqd+6mTC1vIs/ZKEkGXqEREeM4wvw9GufZ5o72XV0chpYl1iKAHpIWUvcBmV3\nPF6ETy0Va2HDWQPtGvcCHMeZVOWYFT+9H4k8OhdUwVThA2wHWg/Ozl7nW+RjQC+q\nt6jvNvtDQ28lItn53VMa+U1BScIQL0N3KVIq3tX/nwKBgQDpu+o785NmdKmXqC99\n+J1R6GQFGz6pgHv0ruKNxSZ/RWY8wiAxnIWm0PdokBi0TPNZ429MouhVEM6LL9Mn\noAdpWoTnk6Po+kW6bb08zfxNBKc33xwAwb3QgZ4uh4/ZeeIdktnOf9cqLM4E+NAt\n0mOpQ7M8yR9HG40NKsYFuG+4IwKBgQDFlmIr73NWVftD0lCVXFeaFM7QVSE8art0\nyFk3OWiwiHbfPOO8tcTu9QtBIfOTms+O2eIBBjbxJcO07E2LhYR9ORU3kodVbAp8\niFVlpavh59v1BUUpDXRGwN7vqz5lH/D3E1DB0vN46mEuFDzFdkoxAx0NaxckKMFo\nn+I/1r9kswKBgDgh2/f34C9b1xrH1lf/a/Cuyc58I4lbhOlXUqtPbJZmGU6AJHEl\nsOdGChS/fl9Wl56/wwv5l6hON/wvSRucEAuaJI7k4xlheXtzPV4r7eqlMm91kmkQ\nHkDD0DRGdCJ7ZfVKPiqcgxTq27NP+db3Tt3ol1QCzRMrp61A13uqNpJXAoGAfNBV\nbXmSOyyPT7VwUBmIAP458qKEHz0w80GIEfmC51kc9kHpfpC4OVaz6E4BJvG5QXzj\nZlA9rrFzYjuPdJ5AJjZD79nxAYYBTc91WoOAA3FKognVOWyVUgiOC4n6HTlDJ2Cd\nOAMA6BXuk4QXK4lgrntQA+TtNltEacntyvPl7T8CgYEAlIDU62c0n3XxMZHqmIVj\n1mhW8Gbq12cc6J5AE50bxx6ELSGfBB4QDdhVsL6AsrcKs5JYps/wpnyNpPeWitp1\nsRwvhmnPV0ghXTnj4zc4L8ucP5bo7p3/Etbp+MShofhln4fVEqzLO8crdvK/70z/\n0+c8REKQuJrBV+RhWdMy7OM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "my-service-account@bootcamp-bigquery-290701.iam.gserviceaccount.com",
+  "client_id": "103775641983694368690",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/my-service-account%40bootcamp-bigquery-290701.iam.gserviceaccount.com"
+}
