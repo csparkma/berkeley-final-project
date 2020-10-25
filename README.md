@@ -58,17 +58,20 @@ Once the dataset preprocessing is complete a variety of classification Machine L
  - Logistic Regression Classifier
    - This is used as a base level "simple" linearly separable type of model
    - Scores:
-     ![Logistic Regression](https://github.com/csparkma/berkeley-final-project/blob/n-toy-working-branch/Resources/Logistic_Regression_Confusion_Matrix.PNG)
+   
+      ![Logistic Regression](https://github.com/csparkma/berkeley-final-project/blob/n-toy-working-branch/Resources/Logistic_Regression_Confusion_Matrix.PNG)
    - Logistic Regression by the scores has an F1 Score of 0.289 which is not that impressive. This model does not seem to be working well for predicting if a customer will have a transaction. This model is used to set a baseline score, and also check to linear-seperability for transactions. The scores of the model show this is not a linearly-separable problem.  
  - Random Forest Classifier
    - A higher complexity Random Forest Classifier is used because of its "simpleness", and ability to work well with imbalanced data sets
    - Scores:
-     ![Random Forest](https://github.com/csparkma/berkeley-final-project/blob/n-toy-working-branch/Resources/Random_Forest_Confusion_Matrix.PNG)
+    
+      ![Random Forest](https://github.com/csparkma/berkeley-final-project/blob/n-toy-working-branch/Resources/Random_Forest_Confusion_Matrix.PNG)
    - Random Forest shows tremendous results by the scores. Random Forest is doing well predicting if a customer will have a transaction, and most likely owes success to the tree decision based structure for given features. There are issues with interpreting a decision tree from the Random Forest however. 
  - Deep Learning Neural Network
    - A deep learning model is applied with 1 hidden layer underneath it
    - Scores: 
-     ![Neural Network](https://github.com/csparkma/berkeley-final-project/blob/n-toy-working-branch/Resources/Neural_Network_Confusion_Matrix.png)
+   
+      ![Neural Network](https://github.com/csparkma/berkeley-final-project/blob/n-toy-working-branch/Resources/Neural_Network_Confusion_Matrix.png)
    - Neural Network is slightly better than Logistic Regression, but fails to Random Forest by the numbers. There may be better performance hidden in this model, but at the expensive cost of computation time. 
 There is one clear model outperforming the rest. Random Forest is the leading model based off of all scores. This is expected because tree based models generally fair better than other models to capture irregularities within the dataset because of the tree decision split structure. However, interpreting the model is chaotic because of the complexity of each estimator within the forest. Using OneHotEncoding on categorical features is most likely the cause for the complexity in reading Decision trees.  
  
