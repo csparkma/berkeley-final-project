@@ -1,6 +1,6 @@
 # Berkeley Final Project
 Berkeley Data Analytics Bootcamp Final project - Sept-Oct 2020
-- Last Updated: 2020-10-18
+- Last Updated: 2020-10-25
 
 # Presentation:
 - Our overall project plan & outcome(s) can be found [here](https://docs.google.com/presentation/d/1IJwm4imWicTFp8LapvV8N88eyIyjYjRl-6_hksx4jWI/edit?usp=sharing).
