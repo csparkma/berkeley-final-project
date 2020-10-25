@@ -150,4 +150,5 @@ ORDER BY date ASC;
 
 -- Check the new bq_totals_sessions table. --
 SELECT * FROM bq_totals_sessions
-SELECT COUNT (*) FROM bigquery_totals_sessions
+SELECT COUNT (*) FROM bq_totals_sessions
+
