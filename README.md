@@ -114,3 +114,6 @@ Tableau will be used to create our Dashboard. It will be hosted through a webpag
 
 ## WEEK 3
 [Tableau Dashboard](https://public.tableau.com/shared/92WF9ZBZ6?:display_count=y&:origin=viz_share_link)
+
+## WEEK 4
+[Dashboard](https://csparkma.github.io/berkeley-final-project/)
