@@ -35,16 +35,16 @@ Our project will focus on:
 
 ## ETL Database Setup:
 The ETL process of this project involved the platforms of PostgresSQL PgAdmin and Jupyter Notebook (utilizing GoogleCloud connection via Python script and Pandas dataframe processing) to prepare the data obtained from Google Analytics BigQuery. An ERD was used to first outline which data needed to be separated in sections from BigQuery, and then analyzed for relevance to the final model. Unusuable data and null values in columns were dropped from the tables, before final joins were performed in SQL. The following tables were created in PostgresSQL PgAdmin (connected to RDS db hosted via AWS), and correspond to the final ERD found in the database.:
-  - Customers
-  - Sessions
-  - CustomerSessionsHabits (Joiner Table to bridge Customers and Sessions table)
+  - **Customers
+  - **Sessions
+  - **CustomerSessionsHabits (Joiner Table to bridge Customers and Sessions table)
    - The following tables were aggregated with "CustomerSessionsHabits" using SQL to rebuild a final "Totals" backup table that included user session data with analytics and geographical demographics:
-       - CustomerDevice
-       - CustomerGeoNetwork
-       -WebsiteTrafficSource
-       -BigQuery_Totals_Join.
+       - **CustomerDevice
+       - **CustomerGeoNetwork
+       -**WebsiteTrafficSource
+       -**BigQuery_Totals_Join
    
-A back-up copy of the original database is available for use (holds a small sample set of data, of ~1700 rows as a placeholder), in addition to the original database that is connected via GoogleCloud for updating with larger data (contains ~500,000 rows of data). 
+A back-up copy of the original table used for ML is available for use (holds a small sample set of data, of ~1700 rows due to limitations in pgAdmin and SQL), in addition to the original table that is connected via GoogleCloud for updating with larger data sets (contains >600,000 rows of data). 
 
 ## Machine Learning Description:
 The Google Analytics BigQuery data must be prepared for Machine Learning methods to be applied. The data preprocessing steps include:
