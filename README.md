@@ -34,20 +34,20 @@ Our project will focus on:
 - **Building a machine learning model to assign a "Propensity to Purchase" score for each unique visitor of the website**
 
 ## ETL Database Setup and Description:
-The ETL process of this project involved the platforms of PostgresSQL PgAdmin and Jupyter Notebook (utilizing GoogleCloud connection via Python script and Pandas dataframe processing) to prepare the data obtained from Google Analytics BigQuery. An entity relationship model of the recreated BigQuery database was first visualized using an ERD to outline which data needed to be separated in sections from BigQuery (insert link), and then analyzed for relevant data to add to tables building the final database structure. Unusuable data and null values in columns were excluded in queries performed in BigQuery, separated into .csv tables, and the final joins were performed in pgAdmin utilizing queries in PostgresSQL. The host server for the database is an RDS instance hosted via Amazon Web Services (AWS). 
+The ETL process of this project involved the platforms of PostgresSQL PgAdmin and Jupyter Notebook (utilizing GoogleCloud connection via Python script and Pandas dataframe processing) to prepare the data obtained from Google Analytics BigQuery. An entity relationship model of the recreated BigQuery database was first visualized using an ERD [here] to outline which data needed to be separated in sections from BigQuery, and then analyzed for relevant data to add to tables building the final database structure. Unusuable data and null values in columns were excluded in queries performed in BigQuery, separated into .csv tables, and the final joins were performed in pgAdmin utilizing queries in PostgresSQL. The host server for the database is an RDS instance hosted via Amazon Web Services (AWS). 
 
 The following tables were created in PostgresSQL PgAdmin, and correspond to the final ERD:
   - **Customers**
   - **Sessions**
   - **CustomerSessionsHabits (Joiner Table to bridge Customers and Sessions table)**
-  
-   - The following tables were aggregated with "CustomerSessionsHabits" using SQL queries to rebuild a final "Totals" backup table that included user session data with analytics and geographical demographics:
-       - **CustomerDevice**
-       - **CustomerGeoNetwork**
-       - **WebsiteTrafficSource**
-       - **BigQuery_Totals_Join**
+
+The following tables were aggregated with "CustomerSessionsHabits" using SQL queries to build a table that included user session data with analytics drawn from the Google Store website (examples include customer geographics, devices, peak time of day for transactions etc.):
+  - **CustomerDevice**
+  - **CustomerGeoNetwork**
+  - **WebsiteTrafficSource**
+  - **BigQuery_Totals_Join**
    
-The final table *bigquery_totals_backup* is the rebuilt, joined, back-up copy of the original aggregated table *bigquery_totals* used for Machine Learning. Bigquery_totals_backup is available for small dataset use (holds a small sample set of data, of ~1700 rows due to limitations in pgAdmin and SQL), in addition to the original table that is connected via GoogleCloud for updating with larger data sets (contains >600,000 rows of data) that was used for Machine Learning. 
+The final table *bigquery_totals_backup* is the rebuilt, joined, back-up copy of the original aggregated table *bigquery_totals* used for Machine Learning. *Bigquery_totals_backup* table is available for small dataset storage (~1700 rows due to storage/computer memory limitations in pgAdmin and SQL), in addition to the original table *bigquery_totals* that is connected via GoogleCloud for updating with larger data sets (currently contains >600,000 rows of data) that was used for Machine Learning. 
 
 ## Machine Learning Description:
 The Google Analytics BigQuery data must be prepared for Machine Learning methods to be applied. The data preprocessing steps include:
