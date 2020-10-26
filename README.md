@@ -10,7 +10,6 @@ Berkeley Data Analytics Bootcamp Final project - Sept-Oct 2020
 ## Group:
 - **Nathan Toy**: Machine Learning Lead & Project Manager Assist
 - **Karen Pineda**: Dashboard
-=======
 - **Jessica Scott**: ETL/Database Maintenance
 - **Connor Sparkman**: Project Manager Lead & Machine Learning Assist
 
@@ -68,22 +67,25 @@ Once the dataset preprocessing is complete a variety of classification Machine L
    - Scores:
    
       ![Logistic Regression](https://github.com/csparkma/berkeley-final-project/blob/n-toy-working-branch/Resources/Logistic_Regression_Confusion_Matrix.PNG)
-   - Logistic Regression by the scores has an F1 Score of 0.289 which is not that impressive. This model does not seem to be working well for predicting if a customer will have a transaction. This model is used to set a baseline score, and also check to linear-seperability for transactions. The scores of the model show this is not a linearly-separable problem.  
+   - The Confusion Matrix shows 164,820 TN (True Negatives) , 1,894 FN (False Negative) , 453 FP (False Positive), and 478 TP (True Positive). The model predicts many False Negatives which drives the Recall and F1 Score low. 
+   - Logistic Regression by the scores has an F1 Score of 0.289 which is fairly low. This model does not seem to be working well for predicting if a customer will have a transaction. This model is used to set a baseline score, and also check to linear-seperability for transactions. The scores of the model show this is not a linearly-separable problem.  The Accuracy of the model is 0.986, which given the imbalance of the dataset, is almost identical to as if it was predicted "No" for all records.
  - Random Forest Classifier
    - A higher complexity Random Forest Classifier is used because of its "simpleness", and ability to work well with imbalanced data sets
    - Scores:
     
       ![Random Forest](https://github.com/csparkma/berkeley-final-project/blob/n-toy-working-branch/Resources/Random_Forest_Confusion_Matrix.PNG)
-   - Random Forest shows tremendous results by the scores. Random Forest is doing well predicting if a customer will have a transaction, and most likely owes success to the tree decision based structure for given features. There are issues with interpreting a decision tree from the Random Forest however. 
+   - The Confusion Matrix shows 164,879 TN, 833 FN, 394 FP, 1,539 TP. The model predicts more accuractely than the other models, and can be seen in the scores, and Confusion Matrix.
+   - Random Forest shows tremendous results by the scores. Random Forest is doing well predicting if a customer will have a transaction, and most likely owes success to the tree decision based structure for given features. There are issues with interpreting a decision tree from the Random Forest however. The Accuracy of the model is 0.993 which is remarkably higher than other models.
  - Deep Learning Neural Network
    - A deep learning model is applied with 1 hidden layer underneath it
    - Scores: 
    
       ![Neural Network](https://github.com/csparkma/berkeley-final-project/blob/n-toy-working-branch/Resources/Neural_Network_Confusion_Matrix.png)
-   - Neural Network is slightly better than Logistic Regression, but fails to Random Forest by the numbers. There may be better performance hidden in this model, but at the expensive cost of computation time. 
+   -  The Confusion Matrix shows 164,715 TN, 1,698 FN, 558 FP, 674 TP. The model does marginally better than the Logistic Regression.
+   - Neural Network is slightly better than Logistic Regression, but fails to Random Forest by the numbers. There may be better performance hidden in this model, but at the expensive cost of computation time. The Accuracy of the model is negligably better than Logistic Regression, with a score of 0.987
 There is one clear model outperforming the rest. Random Forest is the leading model based off of all scores. This is expected because tree based models generally fair better than other models to capture irregularities within the dataset because of the tree decision split structure. However, interpreting the model is chaotic because of the complexity of each estimator within the forest. Using OneHotEncoding on categorical features is most likely the cause for the complexity in reading Decision trees.  
  
-With the models classifying if a visitor will be making a transaction we can start focusing on presenting the predictions as a "propensity to purchase".
+With the Random Forest model performing the best out of all three chosen models a transaction can be correctly predicted up to 99% (Accuracy Score)
 
 # Technologies Used:
 ## Data Cleaning and Analysis
