@@ -34,7 +34,10 @@ Our project will focus on:
 - **Building a machine learning model to assign a "Propensity to Purchase" score for each unique visitor of the website**
 
 ## ETL Database Setup and Description:
-The ETL process of this project involved the platforms of PostgresSQL PgAdmin and Jupyter Notebook (utilizing GoogleCloud connection via Python script and Pandas dataframe processing) to prepare the data obtained from Google Analytics BigQuery into new tables for the PostgresSQL database. An entity relationship model of the recreated BigQuery database was first visualized using an ERD [here] (https://github.com/csparkma/berkeley-final-project/blob/js_working/ucb-finalproject-ERD-final.png) to outline which data needed to be separated in sections from BigQuery, and then analyzed for relevant data to add to tables building the final database structure. Unusuable data and null values in columns were excluded in queries performed in BigQuery, separated into .csv tables, and the final joins were performed in pgAdmin utilizing queries in PostgresSQL. The server for the PostgresSQL database is an RDS instance hosted via Amazon Web Services (AWS). 
+The ETL process of this project involved the platforms of PostgresSQL PgAdmin and Jupyter Notebook (utilizing GoogleCloud connection via Python script and Pandas dataframe processing) to prepare the data obtained from Google Analytics BigQuery into new tables for the PostgresSQL database. An entity relationship model of the recreated BigQuery database was first visualized using an Entity Relationship Diagram (ERD) to outline which data needed to be separated in sections from BigQuery, and then analyzed for relevant data to add to tables building the final database structure. Unusuable data and null values in columns were excluded in queries performed in BigQuery, separated into .csv tables, and the final joins were performed in pgAdmin utilizing queries in PostgresSQL. The server for the PostgresSQL database is an RDS instance hosted via Amazon Web Services (AWS). 
+[ERD]
+
+
 
 The following tables were created in PostgresSQL PgAdmin, and correspond to the final ERD:
   - **Customers**
