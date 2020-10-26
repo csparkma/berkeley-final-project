@@ -58,10 +58,10 @@ The final table *bigquery_totals_backup* is the rebuilt, joined, back-up copy of
 The Google Analytics BigQuery data must be prepared for Machine Learning methods to be applied. The data preprocessing steps include:
  - Connecting to RDS database containing data and populating NaN values as 0
  - "Bucketizing" qualitative components to reduce dimensionality for One Hot Encoding
-   - Browser is reduced from 26 to 11 dimensions
-   - Subcontinent is reduced from 23 to 13 dimensions
-   - Country is reduced from 179 to 31 dimensions
-   - Source is reduced from 96 to 21 dimensions
+   - Browser is reduced from 41to 12 dimensions
+   - Subcontinent is reduced from 23 to 18 dimensions
+   - Country is reduced from 215 to 21 dimensions
+   - Source is reduced from 224 to 20 dimensions
  - Removing features from the original dataset that would not be worthwhile for modeling
    - Geographic features contained incomplete or missing values for > 30% of dataset 
      -  Region, Metro, and City are removed because of incomplete data
