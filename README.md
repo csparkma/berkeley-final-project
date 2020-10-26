@@ -61,7 +61,7 @@ The Google Analytics BigQuery data must be prepared for Machine Learning methods
  - One Hot Encoding is applied to a clean dataset, and split on standard 75% training set and 25% test set via sklearn train_test_split function default
    - One Hot Encoding applied to features:
      - Social Engagement Type, Channel Grouping, Browser, Operating System, Device Category, Continent, Subcontinent, Country, Source, Medium
-Once the dataset preprocessing is complete a variety of classification Machine Learning models are applied to predict if a session is going to result in a transaction. The Machine Learning models are trained on over 500,000 rows of data for customer sessions on the Google Store.
+Once the dataset preprocessing is complete a variety of classification Machine Learning models are applied to predict if a session is going to result in a transaction. The Machine Learning models are trained on over 500,000 rows of data for customer sessions on the Google Store. Originally the data was upsampled because of an imbalance for transactions/sessions, but was found to have better performance without being upsampled.
  - Logistic Regression Classifier
    - This is used as a base level "simple" linearly separable type of model
    - Scores:
