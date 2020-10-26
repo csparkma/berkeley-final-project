@@ -33,18 +33,21 @@ Our project will focus on:
   - (i.e. What countries are customers with repeat purchases from? How many pages does the ideal customer visit prior to purchase? How many visits to the website before a purchase?)
 - **Building a machine learning model to assign a "Propensity to Purchase" score for each unique visitor of the website**
 
-## ETL Database Setup:
-The ETL process of this project involved the platforms of PostgresSQL PgAdmin and Jupyter Notebook (utilizing GoogleCloud connection via Python script and Pandas dataframe processing) to prepare the data obtained from Google Analytics BigQuery. An ERD was used to first outline which data needed to be separated in sections from BigQuery, and then analyzed for relevance to the final model. Unusuable data and null values in columns were dropped from the tables, before final joins were performed in SQL. The following tables were created in PostgresSQL PgAdmin (connected to RDS db hosted via AWS), and correspond to the final ERD found in the database.:
-  - **Customers
-  - **Sessions
-  - **CustomerSessionsHabits (Joiner Table to bridge Customers and Sessions table)
-   - The following tables were aggregated with "CustomerSessionsHabits" using SQL to rebuild a final "Totals" backup table that included user session data with analytics and geographical demographics:
-       - **CustomerDevice
-       - **CustomerGeoNetwork
-       -**WebsiteTrafficSource
-       -**BigQuery_Totals_Join
+## ETL Database Setup and Description:
+The ETL process of this project involved the platforms of PostgresSQL PgAdmin and Jupyter Notebook (utilizing GoogleCloud connection via Python script and Pandas dataframe processing) to prepare the data obtained from Google Analytics BigQuery. An entity relationship model of the recreated BigQuery database was first visualized using an ERD to outline which data needed to be separated in sections from BigQuery (insert link), and then analyzed for relevant data to add to tables building the final database structure. Unusuable data and null values in columns were excluded in queries performed in BigQuery, separated into .csv tables, and the final joins were performed in pgAdmin utilizing queries in PostgresSQL. The host server for the database is an RDS instance hosted via Amazon Web Services (AWS). 
+
+The following tables were created in PostgresSQL PgAdmin, and correspond to the final ERD:
+  - **Customers**
+  - **Sessions**
+  - **CustomerSessionsHabits (Joiner Table to bridge Customers and Sessions table)**
+  
+   - The following tables were aggregated with "CustomerSessionsHabits" using SQL queries to rebuild a final "Totals" backup table that included user session data with analytics and geographical demographics:
+       - **CustomerDevice**
+       - **CustomerGeoNetwork**
+       - **WebsiteTrafficSource**
+       - **BigQuery_Totals_Join**
    
-A back-up copy of the original table used for ML is available for use (holds a small sample set of data, of ~1700 rows due to limitations in pgAdmin and SQL), in addition to the original table that is connected via GoogleCloud for updating with larger data sets (contains >600,000 rows of data). 
+The final table *bigquery_totals_backup* is the rebuilt, joined, back-up copy of the original aggregated table *bigquery_totals* used for Machine Learning. Bigquery_totals_backup is available for small dataset use (holds a small sample set of data, of ~1700 rows due to limitations in pgAdmin and SQL), in addition to the original table that is connected via GoogleCloud for updating with larger data sets (contains >600,000 rows of data) that was used for Machine Learning. 
 
 ## Machine Learning Description:
 The Google Analytics BigQuery data must be prepared for Machine Learning methods to be applied. The data preprocessing steps include:
@@ -103,6 +106,3 @@ Tableau will be used to create our Dashboard. It will be hosted through a webpag
 
 ## WEEK 3
 [Tableau Dashboard](https://public.tableau.com/shared/92WF9ZBZ6?:display_count=y&:origin=viz_share_link)
-
-## WEEK 4
-[Interactive Dashboard](https://csparkma.github.io/berkeley-final-project/)
